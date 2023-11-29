@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="formulario">
+        <h2>Formulário de Cadastro</h2>
+        <form id="formCadastro">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+            <label for="genero">Gênero:</label>
+            <select id="genero" name="genero" required>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <input type="submit" value="Enviar">
+            <input type="button" value="Limpar Campos" onclick="limparCampos()">
+        </form>
+    </section>
+
+    <section id="lista-usuarios">
+        <h2>Usuários</h2>
+        <input type="text" id="pesquisa" placeholder="Pesquisar por nome" oninput="pesquisarItem()">
+        <div id="lista"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
